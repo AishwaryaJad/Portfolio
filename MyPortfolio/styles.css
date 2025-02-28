@@ -1,0 +1,404 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000 !important;
+    color: white;
+}
+
+.navbar {
+    background-color: blueviolet !important;
+    padding: 20px 20px; /* Increased padding */
+    min-height: 90px; /* Set a minimum height for the navbar */
+    position: fixed; /* Fixed at the top */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensures navbar stays above other content */
+    display: flex;
+    align-items: center; /* Centers the content vertically */
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: black !important;
+    margin-left: 20px;
+}
+.navbar-nav {
+    margin-left: auto;
+    display: flex;
+    gap: 40px;
+    padding-right: 30px; 
+    margin-left: auto;
+    font-size: 1.1rem;
+}
+.nav-link {
+    color: white !important;
+}
+.navbar-toggler {
+    border-color: black;
+}
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+/* Content Container */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-left: 30px;
+    padding: 50px;
+}
+
+/* Profile Image */
+
+.container img {
+    width: 210px;
+    height: 250px;
+    border-radius: 0%;
+    object-fit: cover;
+    position: relative;
+    top: -75px; 
+}
+
+@media (max-width: 767px) {
+    .container img {
+       align-items: center; /* Ensures it's centered on mobile*/
+       text-align: center;
+   }
+} 
+
+.content {
+    color: #fff;
+    margin-left: 85px;
+    margin-top: 35px;
+}
+
+@media (max-width: 767px) {
+    .content {
+       align-items: center; /* Ensures it's centered on mobile*/
+       text-align: center;
+       margin-right: 85px;
+       margin-top: 0px;
+   }
+} 
+
+/* Social Links */
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 10px;
+    color: #fff;
+    text-decoration: none;
+    background-color: #444;
+    padding: 10px;
+    border-radius: 50px;
+}
+
+.social-links img {
+    width: 35px;
+    height: 35px;
+    border-radius: 0;
+    position: static;
+}
+
+.social-links img:hover {
+    transform: scale(1.1);
+}
+
+/* Education Section */
+#education {
+    display: none;
+    text-align: center;
+    padding: 140px;
+    background-color: #121212;
+}
+#education h2 {
+    font-size: 2em;
+    color: cyan;
+    margin-bottom: 45px;
+    text-align: center; /* Ensure it is centered */
+}
+
+/* Only apply this when screen width is less than 768px (Bootstrap mobile breakpoint) */
+@media (max-width: 767px) {
+     #education h2 {
+        align-items: center; /* Ensures it's centered on mobile*/
+        text-align: center;
+    }
+} 
+
+/* Education Cards */
+.education-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.edu-card {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+}
+
+.edu-card:hover {
+    transform: scale(1.05);
+}
+
+.edu-card h3 {
+    color: black;
+}
+
+.edu-card p {
+    color: #000;
+}
+
+.highlight {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: darkblue;
+}
+
+/* Skills Section */
+#skills {
+    display: none;
+    text-align: center;
+    padding: 140px;
+    background-color: #1a1a1a;
+}
+
+#skills h2 {
+    font-size: 2em;
+    color: lightcoral;
+    margin-bottom: 45px;
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+    #skills h2 {
+       align-items: center; /* Ensures it's centered on mobile*/
+       text-align: center;
+   }
+} 
+
+
+/* Skill Cards */
+.skills-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.skill-card {
+    background: linear-gradient(135deg, #36d1dc, #5b86e5);
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+}
+
+.skill-card:hover {
+    transform: scale(1.05);
+}
+
+.skill-card h3 {
+    color: black;
+}
+
+.skill-card p {
+    color: white;
+    font-weight: bold;
+}
+
+/* Projects Section */
+#projects {
+    display: none;
+    text-align: center;
+    padding: 140px;
+    background-color: #252525;
+}
+
+#projects h2 {
+    font-size: 2em;
+    color: lightseagreen;
+    margin-bottom: 45px;
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+    #projects h2 {
+       align-items: center; /* Ensures it's centered on mobile*/
+       text-align: center;
+   }
+} 
+
+
+/* Project Cards */
+.projects-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    background: linear-gradient(135deg, lightcoral, lightcoral);
+    padding: 20px;
+    border-radius: 10px;
+    width: 380px;
+    transition: transform 0.3s ease-in-out, opacity 0.5s;
+    text-align: left;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+.project-card h3 {
+    color: black;
+    font-size: 1.4em;
+    text-align: center;
+}
+
+.project-card p {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Internship Section */
+h1 {
+    font-size: 2.5em;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 70px;
+    margin-top: 0px; /* Push it down */
+    margin-bottom: 15px;
+    position: relative;
+    top: 0; /* Remove negative positioning */
+}
+
+#internship h1 {
+    color: lightcoral !important;
+}
+
+
+/* Internship Cards */
+.internship-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin-top: 30px;
+}
+
+.internship-card {
+    background: linear-gradient(135deg, cornflowerblue, cornflowerblue);
+    padding: 20px;
+    border-radius: 10px;
+    width: 40%;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.internship-card h2 {
+    color: black;
+}
+
+.internship-card p {
+    color: white;
+    font-weight: bold;
+}
+
+.internship-card img {
+    width: 70%;
+    max-width: 200px;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+/* Certification Section */
+h1 {
+    font-size: 2.5em;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+#certifications h1 {
+    color: #ffcc00 !important;
+}
+
+/* Certification Cards */
+.cert-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin-top: 35px;
+}
+
+.cert-card {
+    background: linear-gradient(135deg, #ff6b6b, #ff6b6b);
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.6s ease-in-out;
+}
+
+.cert-card h2 {
+    color: black;
+    font-size: 1.2em;
+}
+
+.cert-card img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 10px;
+    margin-top: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.cert-card:hover img {
+    transform: scale(1.1);
+}
+
+.back-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: #333;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    z-index: 1050; /* Ensures it's above Bootstrap elements */
+    cursor: pointer;
+}
+
+.back-button:hover {
+    background: #555;
+}
+
